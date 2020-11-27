@@ -23,14 +23,14 @@ Pod::Spec.new do |s|
 
   s.homepage         = "https://github.com/whhaijun/HJ_MLeaksFinder.git"
   s.license          = 'MIT'
-  s.author           = { "Bright" => "2033253382@qq.com" }
+  s.author           = { "HJ" => "2033253382@qq.com" }
   s.source           = { :git => "https://github.com/whhaijun/HJ_MLeaksFinder.git", :tag => s.version }
 
   s.ios.deployment_target = '6.0'
 
-  s.source_files = 'MLeaksFinder/**/*'
+  s.source_files = 'HJ_MLeaksFinder/**/*'
 
-  s.public_header_files = 'MLeaksFinder/MLeaksFinder.h', 'MLeaksFinder/NSObject+MemoryLeak.h'
+  s.public_header_files = 'HJ_MLeaksFinder/MLeaksFinder.h', 'HJ_MLeaksFinder/NSObject+MemoryLeak.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'FBRetainCycleDetector'
 end

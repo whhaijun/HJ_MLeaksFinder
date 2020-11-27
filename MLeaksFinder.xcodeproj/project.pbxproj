@@ -82,7 +82,7 @@
 		B3ADE1631C1BD1D600AA4F63 = {
 			isa = PBXGroup;
 			children = (
-				B3ADE16E1C1BD1D600AA4F63 /* MLeaksFinder */,
+				B3ADE16E1C1BD1D600AA4F63 /* HJ_MLeaksFinder */,
 				B3ADE16D1C1BD1D600AA4F63 /* Products */,
 				F2E3CE8BD1BB1CB88838AF63 /* Pods */,
 				E3247A573B2F7B1C26211F01 /* Frameworks */,
@@ -97,7 +97,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B3ADE16E1C1BD1D600AA4F63 /* MLeaksFinder */ = {
+		B3ADE16E1C1BD1D600AA4F63 /* HJ_MLeaksFinder */ = {
 			isa = PBXGroup;
 			children = (
 				B3667E4C1D38ADF6002B55DE /* MLeakedObjectProxy.h */,
@@ -124,7 +124,7 @@
 				B32AAB301D767E59001485FF /* UITouch+MemoryLeak.h */,
 				B32AAB311D767E59001485FF /* UITouch+MemoryLeak.m */,
 			);
-			path = MLeaksFinder;
+			path = HJ_MLeaksFinder;
 			sourceTree = "<group>";
 		};
 		E3247A573B2F7B1C26211F01 /* Frameworks */ = {
@@ -151,11 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3ADE1751C1BD1D600AA4F63 /* Build configuration list for PBXNativeTarget "MLeaksFinder" */;
 			buildPhases = (
+				388BF5DEDD424A08565F11B0 /* [CP] Check Pods Manifest.lock */,
 				1E51A1E3538164E48103EBFB /* 📦 Check Pods Manifest.lock */,
 				B3ADE1681C1BD1D600AA4F63 /* Sources */,
 				B3ADE1691C1BD1D600AA4F63 /* Frameworks */,
 				B3ADE16A1C1BD1D600AA4F63 /* CopyFiles */,
-				C5C5444B869098CC15440C05 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,6 +185,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = B3ADE1631C1BD1D600AA4F63;
@@ -213,19 +214,26 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C5C5444B869098CC15440C05 /* 📦 Copy Pods Resources */ = {
+		388BF5DEDD424A08565F11B0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MLeaksFinder-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MLeaksFinder/Pods-MLeaksFinder-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -291,6 +299,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -327,6 +336,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
