@@ -28,9 +28,9 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '6.0'
 
-  s.source_files = 'MLeaksFinder/**/*'
+  s.source_files = 'HJ_MLeaksFinder/**/*'
 
   # s.public_header_files = 'MLeaksFinder/MLeaksFinder.h', 'MLeaksFinder/NSObject+MemoryLeak.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'FBRetainCycleDetector'
+  s.dependency 'FBRetainCycleDetector'
 end
