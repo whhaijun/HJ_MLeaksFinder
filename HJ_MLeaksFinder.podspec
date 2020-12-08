@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'MLeaksFinder/**/*'
 
-  s.public_header_files = 'MLeaksFinder/MLeaksFinder.h', 'MLeaksFinder/NSObject+MemoryLeak.h'
+  # s.public_header_files = 'MLeaksFinder/MLeaksFinder.h', 'MLeaksFinder/NSObject+MemoryLeak.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'FBRetainCycleDetector'
 end
