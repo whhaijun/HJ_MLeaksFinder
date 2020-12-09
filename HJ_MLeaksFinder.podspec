@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.author           = { "HJ" => "2033253382@qq.com" }
   s.source           = { :git => "https://github.com/whhaijun/HJ_MLeaksFinder.git", :tag => s.version }
 
-  s.ios.deployment_target = '6.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'MLeaksFinder/**/*'
 
